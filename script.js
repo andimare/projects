@@ -38,3 +38,22 @@ prevBtn.addEventListener('click',() => {
 
     console.log('hello there')
 })
+
+function slidez(){
+    
+    slides.forEach((slide) => {
+        slide.classList.remove('active')
+    })
+
+    slideNumber++
+
+    if(slideNumber > (numberOfSlides - 1)){
+        slideNumber = 0
+    }
+
+    slides[slideNumber].classList.add('active')
+
+    console.log('hello World')
+}
+
+setInterval(slidez, 3000)
