@@ -28,7 +28,13 @@
     </form>
     <dialog id="myDialog">
         <p>this is a modal dialog</p>
-        <button onclick="document.getElementById('myDialog').close()">close</button></dialog>
-        <button onclick="document.getElementById('myDialog').showModal()">open</button>
+        <button onclick="document.getElementById('myDialog').close()">close</button>
+    </dialog>
+    <button onclick="document.getElementById('myDialog').showModal()">open</button>
+
+    <button popovertarget="popup" class="cursor-pointer">pop</button>
+    <div class="w-64 aspect-square cursor-pointer bg-yellow-600" popover id="popup"> popped
+        <button class="absolute bottom-0" popovertarget="popup" popovertargetaction="hide">close</button>
+    </div>
 </body>
 </html>
